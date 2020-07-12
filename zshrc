@@ -117,7 +117,7 @@ unlockMyPhone() {
 }
 
 castPhoneScreen() {
-	adb shell screenrecord --bit-rate=16m --output-format=h264 --size 1280x720 - | ffplay -framerate 60 -framedrop -bufsize 16M -
+	adb exec-out screenrecord --bit-rate=16m --output-format=h264 --size 1280x720 - | ffplay -
 }
 
 alias shitdown="echo 'Shitting down...' && sleep 1 && shutdown now"

@@ -34,7 +34,7 @@ Plugin 'L9'
 Plugin 'hugolgst/vimsence'
 
 " Smooth scroll plugin
-Plugin 'terryma/vim-smooth-scroll'
+" Plugin 'terryma/vim-smooth-scroll'
 
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
@@ -76,8 +76,8 @@ set number
 set relativenumber
 
 " Smooth scroll stuff
-noremap <silent> <C-U> :call smooth_scroll#up(&scroll*2, 10, 2)<CR>
-noremap <silent> <C-D> :call smooth_scroll#down(&scroll*2, 10, 2)<CR>
+" noremap <silent> <C-U> :call smooth_scroll#up(&scroll*2, 10, 2)<CR>
+" noremap <silent> <C-D> :call smooth_scroll#down(&scroll*2, 10, 2)<CR>
 
 " Vim 8.2 doesn't have these enabled by default for some reason
 syntax on

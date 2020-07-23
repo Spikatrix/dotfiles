@@ -209,9 +209,9 @@ exec --no-startup-id nitrogen --restore
 bindsym --release $mod+x exec --no-startup-id import /tmp/latest-screenshot.png
 
 # interactive screenshot by pressing printscreen
-bindsym --release Print exec gnome-screenshot -d 0 -f "/tmp/latest-screenshot.png"
+bindsym --release Print exec --no-startup-id gnome-screenshot -d 0 -f "/tmp/latest-screenshot.png"
 # crop-area screenshot by pressing Mod + printscreen
-bindsym --release $mod+Print exec gnome-screenshot -a -f "/tmp/latest-screenshot.png"
+bindsym --release $mod+Print exec --no-startup-id gnome-screenshot -a -f "/tmp/latest-screenshot.png"
 
 # The middle button over a titlebar kills the window
 bindsym --release button2 kill

@@ -68,7 +68,8 @@ nnoremap <Up>    :echoe "Stop being a n00b and use k"<CR>
 nnoremap <Down>  :echoe "Stop being a n00b and use j"<CR>
 
 " Clear search highlight
-noremap <F1> :noh<CR>
+noremap  <F1>      :noh<CR>
+inoremap <F1> <C-O>:noh<CR>
 
 " Number toggle switch
 nnoremap <F2> :set nonumber! norelativenumber!<CR>

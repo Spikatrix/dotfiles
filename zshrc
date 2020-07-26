@@ -143,4 +143,8 @@ alias ls="exa"
 # So that less searches appear in the middleish of the screen rather than the top
 export LESS="-R -j.45"
 
+# Editor of choice vim 8.2 rather than vim 7.4
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 alias rm="rm -i"

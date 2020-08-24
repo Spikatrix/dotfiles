@@ -178,6 +178,9 @@ mode "$mode_system" {
 
 bindsym $mod+BackSpace mode "$mode_system"
 
+# Force rescan WiFi networks
+bindsym $mod+Shift+s exec --no-startup-id notify-send -t 3000 "Refreshing WiFi networks" && sudo iwlist wlp3s0 scan && notify-send -t 3000 "Network refresh complete"
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5% #decrease sound volume

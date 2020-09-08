@@ -43,10 +43,15 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+# bindsym $mod+h focus left
+# bindsym $mod+j focus down
+# bindsym $mod+k focus up
+# bindsym $mod+l focus right
+
+bindsym $mod+h exec --no-startup-id $HOME/.config/i3/scripts/fullscreenWrap.sh i3-msg focus left
+bindsym $mod+j exec --no-startup-id $HOME/.config/i3/scripts/fullscreenWrap.sh i3-msg focus down
+bindsym $mod+k exec --no-startup-id $HOME/.config/i3/scripts/fullscreenWrap.sh i3-msg focus up
+bindsym $mod+l exec --no-startup-id $HOME/.config/i3/scripts/fullscreenWrap.sh i3-msg focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -202,7 +207,7 @@ exec_always --no-startup-id synclient NaturalScrolling=1 VertScrollDelta=-113 Ho
 exec --no-startup-id compton --config ~/.config/compton.conf -b
 
 # Lock screen wallpaper
-set $i3lockwall i3lock -i ~/Pictures/Pikachu_LockScreen.png -t
+set $i3lockwall i3lock -i ~/Pictures/lock.png -t -e
 bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 
 # Workspace wallpaper

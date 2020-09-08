@@ -8,10 +8,12 @@
  - i3 conf
  - i3status conf
  - polybar conf
+ - i3lock minimal lock png
  - i3 scripts
    - battery.sh
    - launchPolybar.sh
    - networkConnect.sh
+   - fullscreenWrapp.sh
  - i3status scripts
    - i3statusPythonWrapper.py
    - scratchpadIndicator.py

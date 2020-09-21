@@ -20,6 +20,11 @@ order += "battery 0"
 order += "volume master"
 order += "tztime local"
 
+ipv6 {
+	format_up = "IPv6 available"
+	format_down = "IPv6 unavailable"
+}
+
 wireless _first_ {
         format_up = "W: %essid at %quality power (%ip)"
         format_down = "W: down"

@@ -20,6 +20,6 @@
    - starti3status.sh
  - polybar scripts
    - core-temp.sh
-   - disk-load.sh (wip-ed)
+   - disk-load.sh
    - pulseauto-control.sh
    - spotify_status.py

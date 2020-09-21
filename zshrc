@@ -129,6 +129,7 @@ alias getGitToken="cat ~/Documents/LRC\ Editor/Keystore\,\ Docs\ and\ scripts/Gi
 alias cb='chromium-browser > /dev/null 2>&1 &'
 alias discordo='discord > /dev/null 2>&1 &'
 alias anst='~/Downloads/android-studio/bin/studio.sh &'
+alias ctrlpanel='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center &' # In i3wm, the env var is needed
 
 export PATH="$PATH:/home/jas/Downloads/flutter/flutter/bin"
 alias vim=/usr/local/bin/vim

@@ -33,7 +33,7 @@ format-prefix = "♬ Spotify: "
 format-prefix-foreground = #ffffff
 format-foreground = #39fc03
 format = <label>
-exec = python3 "$HOME/.config/polybar/scripts/spotify_status.py" -f '{play_pause} {song} - {artist}' -t 40 -p '▶,||' 
+exec = python3 "$HOME/.config/polybar/scripts/spotify_status.py" -f '{play_pause} {song} - {artist}' -t 55 -p '▶,||' 
 
 [module/cputemp]
 type = custom/script

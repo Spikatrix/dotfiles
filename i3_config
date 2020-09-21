@@ -257,6 +257,7 @@ bindsym $mod+m bar mode toggle
 assign [class="discord"] → number 2
 for_window [class="Spotify"] move to workspace 3
 for_window [window_type="normal" class="jetbrains-studio"] move to workspace 4
+for_window [class="Alterman"] floating enable
 for_window [class="Zoned"] floating enable
 for_window [class="scrcpy"] floating enable
 

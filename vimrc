@@ -30,8 +30,7 @@ Plugin 'L9'
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 "Discord RPC Plugin so that the whole world can see what cool projects I'm working on
-" Plugin 'ananagame/vimsence'
-Plugin 'hugolgst/vimsence'
+" Plugin 'hugolgst/vimsence'
 
 " Smooth scroll plugin
 " Plugin 'terryma/vim-smooth-scroll'

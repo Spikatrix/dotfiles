@@ -13,7 +13,7 @@
    - battery.sh
    - launchPolybar.sh
    - networkConnect.sh
-   - fullscreenWrapp.sh
+   - fullscreenWrap.sh
  - i3status scripts
    - i3statusPythonWrapper.py
    - scratchpadIndicator.py

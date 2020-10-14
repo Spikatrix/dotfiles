@@ -25,6 +25,9 @@ Plugin 'L9'
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
 
+" Surround stuff plugin
+Plugin 'tpope/vim-surround'
+
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -85,6 +88,9 @@ set backspace=indent,eol,start
 
 " Gets rid of vim-airline bar mode update changes
 set ttimeoutlen=0
+
+" Case insentitive search (Use \C for sensitive match)
+set ignorecase
 
 " Search highlight
 set hlsearch

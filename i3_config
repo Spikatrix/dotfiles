@@ -260,6 +260,7 @@ for_window [window_type="normal" class="jetbrains-studio"] move to workspace 4
 for_window [class="Alterman"] floating enable
 for_window [class="Zoned"] floating enable
 for_window [class="scrcpy"] floating enable
+for_window [title="Android Emulator.*"] floating enable
 
 # Run Polybar 
 exec_always --no-startup-id $HOME/.config/i3/scripts/launchPolybar.sh

@@ -106,6 +106,9 @@ ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# CTRL + Space for advancing one word in autosuggestions
+bindkey '^ ' forward-word
+
 # Disables the user@hostname thingy
 prompt_context() { }
 
@@ -129,7 +132,9 @@ alias getGitToken="cat ~/Documents/LRC\ Editor/Keystore\,\ Docs\ and\ scripts/Gi
 alias cb='chromium-browser > /dev/null 2>&1 &'
 alias discordo='discord > /dev/null 2>&1 &'
 alias anst='~/Downloads/android-studio/bin/studio.sh &'
+alias arc='file-roller'
 alias ctrlpanel='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center &' # In i3wm, the env var is needed
+alias audioctrl='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center sound &' # In i3wm, the env var is needed
 
 export PATH="$PATH:/home/jas/Downloads/flutter/flutter/bin"
 alias vim=/usr/local/bin/vim

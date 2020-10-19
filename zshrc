@@ -112,7 +112,6 @@ bindkey '^ ' forward-word
 # Disables the user@hostname thingy
 prompt_context() { }
 
-#Stuff I made for ~~fun~~ my needs heh
 unlockMyPhone() {
 	if [ "$1" = "FORCE" ]; then
 		adb shell input keyevent 26 # Wakey wakey
@@ -122,6 +121,7 @@ unlockMyPhone() {
 	adb shell input tap 606 1135
 }
 
+# scrcpy is better
 castPhoneScreen() {
 	adb exec-out screenrecord --bit-rate=16m --output-format=h264 --size 1280x720 - | ffplay -
 }
@@ -140,6 +140,7 @@ export PATH="$PATH:/home/jas/Downloads/flutter/flutter/bin"
 alias vim=/usr/local/bin/vim
 alias vi=/usr/bin/vim
 
+# Unused as xbacklight takes care of it, but useful as a fallback in case of issues (which never happened with the current xbacklight)
 setBrightness() {
 	if [ "$1" -eq "$1" ]; then
 		echo "$1" > /sys/class/backlight/intel_backlight/brightness

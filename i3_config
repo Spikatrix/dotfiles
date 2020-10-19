@@ -214,15 +214,22 @@ bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 exec --no-startup-id nitrogen --restore
 
 # Take a screenshot upon pressing $mod+x (select an area)
-bindsym --release $mod+x exec --no-startup-id import $HOME/Pictures/latest-screenshot.png
+bindsym --release $mod+x exec --no-startup-id import $HOME/Pictures/latest-screenshot.png && xclip -selection clipboard -t image/png -i $HOME/Pictures/latest-screenshot.png
 
 # interactive screenshot by pressing printscreen
-bindsym --release Print exec --no-startup-id gnome-screenshot -d 0 -f "$HOME/Pictures/latest-screenshot.png"
+bindsym --release Print exec --no-startup-id gnome-screenshot -d 0 -f "$HOME/Pictures/latest-screenshot.png" && xclip -selection clipboard -t image/png -i $HOME/Pictures/latest-screenshot.png
+
 # crop-area screenshot by pressing Mod + printscreen
-bindsym --release $mod+Print exec --no-startup-id gnome-screenshot -a -f "$HOME/Pictures/latest-screenshot.png"
+bindsym --release $mod+Print exec --no-startup-id gnome-screenshot -a -f "$HOME/Pictures/latest-screenshot.png" && xclip -selection clipboard -t image/png -i $HOME/Pictures/latest-screenshot.png
+
+# Edit a screenshot quickly
+bindsym --release $mod+Ctrl+e exec --no-startup-id gimp "$HOME/Pictures/latest-screenshot.png"
 
 # The middle button over a titlebar kills the window
 bindsym --release button2 kill
+
+# Kill window alternative if there's no titlebar (Tap top-right corner of touchpad for button2)
+bindsym --whole-window $mod+Shift+button2 kill
 
 # The right button toggles floating
 bindsym $mod+button3 floating toggle

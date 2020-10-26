@@ -95,7 +95,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+g focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -216,8 +216,11 @@ exec --no-startup-id nitrogen --restore
 # Take a screenshot upon pressing $mod+x (select an area)
 bindsym --release $mod+x exec --no-startup-id import $HOME/Pictures/latest-screenshot.png && xclip -selection clipboard -t image/png -i $HOME/Pictures/latest-screenshot.png
 
-# interactive screenshot by pressing printscreen
+# Screenshot by pressing printscreen
 bindsym --release Print exec --no-startup-id gnome-screenshot -d 0 -f "$HOME/Pictures/latest-screenshot.png" && xclip -selection clipboard -t image/png -i $HOME/Pictures/latest-screenshot.png
+
+# Screenshot of active window only
+bindsym --release $mod+Shift+Print exec --no-startup-id gnome-screenshot -w -d 0 -f "$HOME/Pictures/latest-screenshot.png" && xclip -selection clipboard -t image/png -i $HOME/Pictures/latest-screenshot.png
 
 # crop-area screenshot by pressing Mod + printscreen
 bindsym --release $mod+Print exec --no-startup-id gnome-screenshot -a -f "$HOME/Pictures/latest-screenshot.png" && xclip -selection clipboard -t image/png -i $HOME/Pictures/latest-screenshot.png
@@ -238,10 +241,10 @@ bindsym $mod+button3 floating toggle
 bindsym button9 move left
 bindsym button8 move right
 
-# Make the currently focused window a scratchpad
+# Move currently active window into the scratchpad
 bindsym $mod+Shift+minus move scratchpad
 
-# Show the first scratchpad window
+# Fetch a window from the scratchpad (Cycles on subsequent presses)
 bindsym $mod+Shift+plus scratchpad show
 
 # i3-gaps params

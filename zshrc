@@ -133,10 +133,14 @@ alias cb='chromium-browser > /dev/null 2>&1 &'
 alias discordo='discord > /dev/null 2>&1 &'
 alias anst='~/Downloads/android-studio/bin/studio.sh &'
 alias arc='file-roller'
+alias evince='evince 2>/dev/null'
+alias eog='eog 2>/dev/null'
 alias ctrlpanel='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center &' # In i3wm, the env var is needed
 alias audioctrl='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center sound &' # In i3wm, the env var is needed
 
 export PATH="$PATH:/home/jas/Downloads/flutter/flutter/bin"
+export PATH="$PATH:/home/jas/Documents/Code/Web/dart-sass"
+
 alias vim=/usr/local/bin/vim
 alias vi=/usr/bin/vim
 

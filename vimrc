@@ -28,6 +28,9 @@ Plugin 'L9'
 " Surround stuff plugin
 Plugin 'tpope/vim-surround'
 
+" Auto detect indentation and set params accordingly
+Plugin 'tpope/vim-sleuth'
+
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -111,7 +114,7 @@ endif
 set list
 set listchars=trail:·,tab:▸-
 
-" Stuff
+" Indentation stuff (sleuth plugin above overrides these)
 set tabstop=4
 set shiftwidth=4
 set ai

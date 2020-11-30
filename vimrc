@@ -1,29 +1,17 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" Get the defaults because those are pretty sweet
+source $VIMRUNTIME/defaults.vim
 
-" set the runtime path to include Vundle and initialize
+filetype off " Maybe for plugins to work as expected? idk
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-
-" plugin on GitHub repo
+" Plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 
-" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
-
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
 
 " Surround stuff plugin
 Plugin 'tpope/vim-surround'
@@ -35,7 +23,7 @@ Plugin 'tpope/vim-sleuth'
 " Pass the path to set the runtimepath properly.
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
-"Discord RPC Plugin so that the whole world can see what cool projects I'm working on
+" Discord RPC Plugin so that the whole world can see what cool projects I'm working on
 " Plugin 'hugolgst/vimsence'
 
 " Smooth scroll plugin
@@ -45,15 +33,15 @@ Plugin 'tpope/vim-sleuth'
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
-" Plugin for cool status bar
-Plugin 'vim-airline/vim-airline'
+" Plugin for cool status bar (Is it needed tho?)
+" Plugin 'vim-airline/vim-airline'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()
+
+filetype plugin indent on
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
+" filetype plugin on
+
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -61,16 +49,16 @@ filetype plugin indent on    " required
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1 (Don't remember if this does work, probably yes with airline)
 
 set pastetoggle=<F3>
 
-nnoremap <Left>  :echoe "Stop being a n00b and use h"<CR>
-nnoremap <Right> :echoe "Stop being a n00b and use l"<CR>
-nnoremap <Up>    :echoe "Stop being a n00b and use k"<CR>
-nnoremap <Down>  :echoe "Stop being a n00b and use j"<CR>
+" These felt like a big hinderance tbh
+" nnoremap <Left>  :echoe "Stop being a n00b and use h"<CR>
+" nnoremap <Right> :echoe "Stop being a n00b and use l"<CR>
+" nnoremap <Up>    :echoe "Stop being a n00b and use k"<CR>
+" nnoremap <Down>  :echoe "Stop being a n00b and use j"<CR>
 
 " Clear search highlight
 noremap  <F1>      :noh<CR>
@@ -85,11 +73,7 @@ set relativenumber
 " noremap <silent> <C-U> :call smooth_scroll#up(&scroll*2, 10, 2)<CR>
 " noremap <silent> <C-D> :call smooth_scroll#down(&scroll*2, 10, 2)<CR>
 
-" Vim 8.2 doesn't have these enabled by default for some reason
-syntax on
-set backspace=indent,eol,start
-
-" Gets rid of vim-airline bar mode update changes
+" Wait for to make sure that esc is truly and esc keypress
 set ttimeoutlen=0
 
 " Case insentitive search (Use \C for sensitive match)
@@ -100,10 +84,11 @@ set hlsearch
 set incsearch
 
 " Change near invisible bracket highlight color to something more reasonable
-hi MatchParen cterm=none ctermbg=none ctermfg=red
+" (Use if tmux+vim-airline)
+" hi MatchParen cterm=none ctermbg=none ctermfg=red
 
 " vim-airline already shows the mode, no need to show it again
-set noshowmode
+" set noshowmode
 
 if has('persistent_undo')      " check if your vim version supports it
   set undofile                 " turn on the feature  
@@ -118,3 +103,6 @@ set listchars=trail:·,tab:▸-
 set tabstop=4
 set shiftwidth=4
 set ai
+
+" I don't like deleted chars getting into registers
+noremap x "_x

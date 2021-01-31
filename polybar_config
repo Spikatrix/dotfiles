@@ -33,7 +33,9 @@ format-prefix = "♬ Spotify: "
 format-prefix-foreground = #ffffff
 format-foreground = #39fc03
 format = <label>
-exec = python3 "$HOME/.config/polybar/scripts/spotify_status.py" -f '{play_pause} {song} - {artist}' -t 55 -p '▶,||' 
+exec = python3 "$HOME/.config/polybar/scripts/spotify_status.py" -f '{play_pause} {song} - {artist}' -t 55 -p '▶,||'
+click-left = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+
 
 [module/cputemp]
 type = custom/script

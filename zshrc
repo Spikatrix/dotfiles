@@ -112,6 +112,26 @@ bindkey '^ ' forward-word
 # Disables the user@hostname thingy
 prompt_context() { }
 
+extract () {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)  tar xjf $1      ;;
+            *.tar.gz)   tar xzf $1      ;;
+            *.bz2)      bunzip2 $1      ;;
+            *.rar)      rar x $1        ;;
+            *.gz)       gunzip $1       ;;
+            *.tar)      tar xf $1       ;;
+            *.tbz2)     tar xjf $1      ;;
+            *.tgz)      tar xzf $1      ;;
+            *.zip)      unzip $1        ;;
+            *.Z)        uncompress $1   ;;
+            *)          echo "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
 unlockMyPhone() {
 	if [ "$1" = "FORCE" ]; then
 		adb shell input keyevent 26 # Wakey wakey
@@ -125,6 +145,8 @@ unlockMyPhone() {
 castPhoneScreen() {
 	adb exec-out screenrecord --bit-rate=16m --output-format=h264 --size 1280x720 - | ffplay -
 }
+
+inst='/storage/emulated/0'
 
 alias shitdown="echo 'Shitting down...' && sleep 1 && shutdown now"
 alias zzzzzzzzzzzzzz="systemctl suspend"

@@ -4,10 +4,12 @@
  - bashrc
  - zshrc
  - vimrc
+ - dunstrc
  - compton conf
  - i3 conf
  - i3status conf
  - polybar conf
+ - conky conf
  - i3lock minimal lock png
  - i3 scripts
    - battery.sh

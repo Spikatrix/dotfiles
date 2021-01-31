@@ -10,6 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $alt Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -127,6 +128,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+$alt+e exec "i3-msg exit"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -213,6 +215,9 @@ bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 # Workspace wallpaper
 exec --no-startup-id nitrogen --restore
 
+# Copy screenshot to the clipboard
+bindsym --release $mod+Ctrl+c exec --no-startup-id xclip -selection clipboard -t image/png -i $HOME/Pictures/latest-screenshot.png
+
 # Take a screenshot upon pressing $mod+x (select an area)
 bindsym --release $mod+x exec --no-startup-id import $HOME/Pictures/latest-screenshot.png && xclip -selection clipboard -t image/png -i $HOME/Pictures/latest-screenshot.png
 
@@ -252,7 +257,7 @@ gaps inner 10
 gaps outer 10
 
 # You can also use any non-zero value if you'd like to have a border
-for_window [class=".*"] border pixel 0 
+for_window [class=".*"] border pixel 0
 smart_borders on
 smart_borders no_gaps
 border_radius 15
@@ -277,6 +282,9 @@ exec_always --no-startup-id $HOME/.config/i3/scripts/launchPolybar.sh
 
 # Script so that I can connect to other networks
 bindsym --release $mod+c exec --no-startup-id $HOME/.config/i3/scripts/networkConnect.sh
+
+# Script to quickly connect to my phone using ADB wirelessly
+bindsym --release $mod+Shift+p exec --no-startup-id connectADBWiFi # Why tf is this not working?!
 
 # Alt tab heh
 bindsym $mod+Tab workspace back_and_forth

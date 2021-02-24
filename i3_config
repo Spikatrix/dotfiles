@@ -215,23 +215,29 @@ bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 # Workspace wallpaper
 exec --no-startup-id nitrogen --restore
 
-# Copy screenshot to the clipboard
-bindsym --release $mod+Ctrl+c exec --no-startup-id xclip -selection clipboard -t image/png -i $HOME/Pictures/latest-screenshot.png
+# Screenshot location
+set $screenshotlocation $HOME/Pictures/latest-screenshot.png
+
+# Copy screenshot to the clipboard command (Can't use $screenshotlocation inside set unfortunately)
+set $copyscreenshot xclip -selection clipboard -t image/png -i $HOME/Pictures/latest-screenshot.png
+
+# Bind copy screenshot command
+bindsym --release $mod+Ctrl+c exec --no-startup-id $copyScreenshot
 
 # Take a screenshot upon pressing $mod+x (select an area)
-bindsym --release $mod+x exec --no-startup-id import $HOME/Pictures/latest-screenshot.png && xclip -selection clipboard -t image/png -i $HOME/Pictures/latest-screenshot.png
+bindsym --release $mod+x exec --no-startup-id import $screenshotlocation && $copyscreenshot
 
 # Screenshot by pressing printscreen
-bindsym --release Print exec --no-startup-id gnome-screenshot -d 0 -f "$HOME/Pictures/latest-screenshot.png" && xclip -selection clipboard -t image/png -i $HOME/Pictures/latest-screenshot.png
+bindsym --release Print exec --no-startup-id gnome-screenshot -d 0 -f $screenshotlocation && $copyscreenshot
 
 # Screenshot of active window only
-bindsym --release $mod+Shift+Print exec --no-startup-id gnome-screenshot -w -d 0 -f "$HOME/Pictures/latest-screenshot.png" && xclip -selection clipboard -t image/png -i $HOME/Pictures/latest-screenshot.png
+bindsym --release $mod+Shift+Print exec --no-startup-id gnome-screenshot -w -d 0 -f $screenshotlocation && $copyscreenshot
 
 # crop-area screenshot by pressing Mod + printscreen
-bindsym --release $mod+Print exec --no-startup-id gnome-screenshot -a -f "$HOME/Pictures/latest-screenshot.png" && xclip -selection clipboard -t image/png -i $HOME/Pictures/latest-screenshot.png
+bindsym --release $mod+Print exec --no-startup-id gnome-screenshot -a -f $screenshotlocation && $copyscreenshot
 
 # Edit a screenshot quickly
-bindsym --release $mod+Ctrl+e exec --no-startup-id gimp "$HOME/Pictures/latest-screenshot.png"
+bindsym --release $mod+Ctrl+e exec --no-startup-id gimp $screenshotlocation
 
 # The middle button over a titlebar kills the window
 bindsym --release button2 kill

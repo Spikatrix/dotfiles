@@ -23,5 +23,6 @@
  - polybar scripts
    - core-temp.sh
    - disk-load.sh
+   - mic-volume.sh
    - pulseauto-control.sh
    - spotify_status.py

@@ -147,6 +147,7 @@ castPhoneScreen() {
 }
 
 inst='/storage/emulated/0'
+sdc='/storage/0292-1603'
 
 alias shitdown="echo 'Shitting down...' && sleep 1 && shutdown now"
 alias zzzzzzzzzzzzzz="systemctl suspend"

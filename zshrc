@@ -151,7 +151,6 @@ sdc='/storage/0292-1603'
 
 alias shitdown="echo 'Shitting down...' && sleep 1 && shutdown now"
 alias zzzzzzzzzzzzzz="systemctl suspend"
-alias getGitToken="cat ~/Documents/LRC\ Editor/Keystore\,\ Docs\ and\ scripts/Git\ Access\ Token.txt | tail -1 | xsel -ib"
 alias cb='chromium-browser > /dev/null 2>&1 &'
 alias discordo='discord > /dev/null 2>&1 &'
 alias anst='~/Downloads/android-studio/bin/studio.sh &'

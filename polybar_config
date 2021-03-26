@@ -21,7 +21,7 @@ font-3 = FontAwesome:size=10;2
 font-4 = Roboto:style=Regular
 
 modules-left = spotify
-modules-right = wireless-network mic-volume diskload cputemp cpu memory battery date
+modules-right = wired-network wireless-network mic-volume diskload cputemp cpu memory battery date
 
 # modules-right = volume backlight wireless-network wired-network battery date
 # Most of the stuff above wasn't installed during compilation :/

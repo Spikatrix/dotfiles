@@ -161,7 +161,6 @@ alias ctrlpanel='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center &' # In i3wm
 alias audioctrl='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center sound &' # In i3wm, the env var is needed
 alias weather='curl wttr.in/${city}'
 
-export PATH="$PATH:/home/jas/Downloads/flutter/flutter/bin"
 export PATH="$PATH:/home/jas/Documents/Code/Web/dart-sass"
 
 alias vim=/usr/local/bin/vim
@@ -184,4 +183,5 @@ export LESS="-R -j.45"
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+# Prevent accidental deletions by requiring confirmation
 alias rm="rm -i"

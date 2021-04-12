@@ -1,0 +1,42 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=2000
+SAVEHIST=2000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/jas/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+###################################
+
+# Enables some modifier keybinds
+source ~/.zshkeys
+
+# Enables zsh powerline
+powerline-daemon -q
+. /usr/share/powerline/bindings/zsh/powerline.zsh
+
+# zsh suggestion and syntax highlighter support
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Use vim as the editor of choice
+export VISUAL="vim"
+export EDITOR="$VISUAL"
+
+# Aliased list dir commands
+alias ls=exa
+alias ll="exa -lah"
+alias l=exa
+
+# Prevent accidental deletions by requiring confirmation
+alias rm="rm -i"
+
+# Makes less searches appear in the middleish of the screen rather than the top
+export LESS="-R -j.45"
+
+# Cool weather display
+alias weather='curl wttr.in/${city}'

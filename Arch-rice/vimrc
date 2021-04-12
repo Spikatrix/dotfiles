@@ -1,0 +1,23 @@
+" Load defaults always
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
+
+" Loads /usr/share/vim/vimfiles/archlinux.vim
+runtime! archlinux.vim
+
+" Save as sudo shortcut (:w!!)
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+
+" Enable numbering
+set number
+
+" Case insentitive search (Use \C for sensitive match)
+set ignorecase
+
+" Setup undo files
+if has('persistent_undo')      " check if your vim version supports it
+  set undofile                 " turn on the feature  
+  set undodir=$HOME/.vim/undo  " directory where the undo files will be stored
+endif
+
+

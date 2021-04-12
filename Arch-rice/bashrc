@@ -1,0 +1,30 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Replaced by exa which has color by default
+# alias ls='ls --color=auto'
+
+# Prompt
+PS1='[\u@\h \W]\$ '
+
+# Use vim as the editor of choice
+export VISUAL="vim"
+export EDITOR="$VISUAL"
+
+# Aliased commands
+alias ls=exa
+alias ll="exa -lah"
+alias l=exa
+
+# Prevent accidental deletions by requiring confirmation
+alias rm="rm -i"
+
+# Makes less searches appear in the middleish of the screen rather than the top
+export LESS="-R -j.45"
+
+# Cool weather display
+alias weather='curl wttr.in/${city}'

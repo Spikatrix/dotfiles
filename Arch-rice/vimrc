@@ -11,6 +11,9 @@ cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 " Enable numbering
 set number
 
+" Fixes vim colorschemes in tmux
+set background=dark
+
 " Case insentitive search (Use \C for sensitive match)
 set ignorecase
 

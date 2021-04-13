@@ -19,9 +19,14 @@ source ~/.zshkeys
 powerline-daemon -q
 . /usr/share/powerline/bindings/zsh/powerline.zsh
 
-# zsh suggestion and syntax highlighter support
+# zsh suggestion, syntax highlighter support and expand multiple dots support
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-expand-dots/zsh-expand-dots.zsh
+
+# fzf zsh integration
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 # Use vim as the editor of choice
 export VISUAL="vim"

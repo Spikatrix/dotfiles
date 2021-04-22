@@ -33,3 +33,4 @@
     - zshrc (with zshkeys)
     - vimrc
     - tmux conf
+    - libinput-gestures conf

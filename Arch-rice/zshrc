@@ -12,6 +12,9 @@ compinit
 # End of lines added by compinstall
 ###################################
 
+# Enable cd-ing without typing cd
+setopt autocd
+
 # Enables some modifier keybinds
 source ~/.zshkeys
 

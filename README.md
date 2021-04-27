@@ -34,3 +34,4 @@
     - vimrc
     - tmux conf
     - libinput-gestures conf
+    - gitconfig

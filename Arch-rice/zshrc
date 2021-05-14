@@ -21,6 +21,9 @@ setopt autocd
 # Enables some modifier keybinds
 source ~/.zshkeys
 
+# Enables a few external apps
+source ~/.apps
+
 # Enables zsh powerline
 powerline-daemon -q
 . /usr/share/powerline/bindings/zsh/powerline.zsh

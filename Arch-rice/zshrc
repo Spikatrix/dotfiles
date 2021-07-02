@@ -54,3 +54,19 @@ export LESS="-R -j.45"
 
 # Cool weather display
 alias weather='curl wttr.in/${city}'
+
+# Why are the lxqt apps named too long and inconsistently
+alias imgview=lximage-qt
+alias archiver=lxqt-archiver
+
+# Compress an image quickly
+function tinypngcompress() {
+	TINYAPIKEY="${TINYAPIKEY}"
+	output_link=`curl https://api.tinify.com/shrink --user api:"$TINYAPIKEY" --data-binary @"$1" --dump-header /dev/stdout --silent | grep location | awk '{ print $2 }'`
+	if [ "$output_link" != "" ]; then
+		output_link=`echo "$output_link" | sed 's/\r$//'` # Strip the stupid carriage return
+		curl "$output_link" --output "compressed_img.png"
+	else
+		echo "Error: Empty response URL; invalid file?"
+	fi
+}

@@ -56,8 +56,8 @@ export LESS="-R -j.45"
 alias weather='curl wttr.in/${city}'
 
 # Why are the lxqt apps named too long and inconsistently
-alias imgview=lximage-qt
-alias archiver=lxqt-archiver
+alias img=lximage-qt
+alias arc=lxqt-archiver
 
 # Compress an image quickly
 function tinypngcompress() {

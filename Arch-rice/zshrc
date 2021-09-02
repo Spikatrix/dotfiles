@@ -36,6 +36,10 @@ source /usr/share/zsh/plugins/zsh-expand-dots/zsh-expand-dots.zsh
 # fzf zsh integration
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+export FZF_ALT_C_COMMAND='fd'
+
+# Copy terminfo files to the server for proper ssh keybinds
+alias ssh="kitty +kitten ssh"
 
 # Use vim as the editor of choice
 export VISUAL="vim"

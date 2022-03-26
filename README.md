@@ -30,8 +30,9 @@
      - spotify_status.py
  - Arch rice
     - bashrc
-    - zshrc (with zshkeys)
+    - zshrc (with zshkeys and apps)
     - vimrc
     - tmux conf
     - libinput-gestures conf
     - gitconfig
+    - vscode settings and keybinds

@@ -1,0 +1,40 @@
+{
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "workbench.colorTheme": "Red",
+    "discord.detailsDebugging": "Squashing pesky bugs",
+    "discord.detailsIdling": "Procrastinating",
+    "workbench.colorCustomizations": {
+        "[Red]": {
+            "editorCursor.foreground": "#ffff00",
+            "terminalCursor.foreground": "#ffff00",
+            "editor.selectionBackground": "#584e4e"
+        }
+    },
+    "git.confirmSync": false,
+    "window.titleBarStyle": "custom",
+    "workbench.startupEditor": "newUntitledFile",
+    "diffEditor.renderSideBySide": false,
+    "vetur.format.options.tabSize": 4,
+    "vetur.format.options.useTabs": true,
+    "discord.removeRemoteRepository": true,
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.fontLigatures": "'ccmp' off",
+    "editor.fontFamily": "'Source Code Pro', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "scss.lint.validProperties": [
+        "speak"
+    ],
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.enabled": false,
+    "terminal.integrated.tabs.enabled": true,
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "typescript.preferences.importModuleSpecifierEnding": "index",
+    "editor.insertSpaces": false,
+    "vetur.grammar.customBlocks": {
+        "docs": "md",
+        "i18n": "json"
+    },
+}

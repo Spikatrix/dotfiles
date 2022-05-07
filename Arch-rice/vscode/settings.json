@@ -1,6 +1,5 @@
 {
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
     "workbench.colorTheme": "Red",
     "discord.detailsDebugging": "Squashing pesky bugs",
     "discord.detailsIdling": "Procrastinating",

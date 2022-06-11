@@ -8,6 +8,20 @@
             "editorCursor.foreground": "#ffff00",
             "terminalCursor.foreground": "#ffff00",
             "editor.selectionBackground": "#584e4e"
+        },
+        "[AMOLED]": {
+            "tab.activeBorder": "#ffff00",
+            "menu.background": "#000000",
+            "quickInput.background": "#000000",
+            "sideBar.foreground": "#cccccc",
+            "activityBarBadge.background": "#0000aa",
+            "editor.selectionBackground": "#333333",
+            "editor.lineHighlightBorder": "#000000",
+            "editor.lineHighlightBackground": "#111111",
+            "editor.findMatchHighlightBackground": "#665500",
+            "editor.findMatchBackground": "#777777",
+            "editorSuggestWidget.background": "#000000",
+            "editorHoverWidget.background": "#000000"
         }
     },
     "git.confirmSync": false,

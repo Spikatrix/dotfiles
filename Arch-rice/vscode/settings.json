@@ -19,9 +19,11 @@
             "editor.lineHighlightBorder": "#000000",
             "editor.lineHighlightBackground": "#111111",
             "editor.findMatchHighlightBackground": "#665500",
-            "editor.findMatchBackground": "#777777",
+            "editor.findMatchBackground": "#333333",
+            "editor.findMatchBorder": "#aaaaaa",
             "editorSuggestWidget.background": "#000000",
-            "editorHoverWidget.background": "#000000"
+            "editorHoverWidget.background": "#000000",
+            "sideBarSectionHeader.background": "#000000"
         }
     },
     "git.confirmSync": false,

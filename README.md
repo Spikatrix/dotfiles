@@ -1,6 +1,6 @@
-# My precious dotfiles
+# My dotfiles
 
-## Contents:
+## Contents
  - Zorin rice
    - bashrc
    - zshrc

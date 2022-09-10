@@ -27,4 +27,4 @@ alias rm="rm -i"
 export LESS="-R -j.45"
 
 # Cool weather display
-alias weather='curl wttr.in/${city}'
+alias weather="curl wttr.in/${city}"

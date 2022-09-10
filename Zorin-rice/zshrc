@@ -159,7 +159,7 @@ alias evince='evince 2>/dev/null'
 alias eog='eog 2>/dev/null'
 alias ctrlpanel='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center &' # In i3wm, the env var is needed
 alias audioctrl='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center sound &' # In i3wm, the env var is needed
-alias weather='curl wttr.in/${city}'
+alias weather="curl wttr.in/${city}"
 
 export PATH="$PATH:/home/jas/Documents/Code/Web/dart-sass"
 

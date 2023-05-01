@@ -75,3 +75,10 @@ function tinypngcompress() {
 		echo "Error: Empty response URL; invalid file?"
 	fi
 }
+
+# Handle .xxx extension files with the specified command
+alias -s {js,json,env,md,html,css,toml}=cat
+alias -s git="git clone"
+
+# Include yarn global packages in PATH
+export PATH="$PATH:$(yarn global bin)"

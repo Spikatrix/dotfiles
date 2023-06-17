@@ -34,5 +34,6 @@
     - vimrc
     - tmux conf
     - libinput-gestures conf
+    - yaycache
     - gitconfig
     - vscode settings and keybinds

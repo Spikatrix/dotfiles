@@ -1,15 +1,16 @@
 {
     "telemetry.telemetryLevel": "off",
-    "workbench.colorTheme": "Red",
     "discord.detailsDebugging": "Squashing pesky bugs",
     "discord.detailsIdling": "Procrastinating",
+    "discord.removeRemoteRepository": true,
+    "workbench.colorTheme": "Pitch Black",
     "workbench.colorCustomizations": {
         "[Red]": {
             "editorCursor.foreground": "#ffff00",
             "terminalCursor.foreground": "#ffff00",
             "editor.selectionBackground": "#584e4e"
         },
-        "[AMOLED]": {
+        "[Pitch Black]": {
             "tab.activeBorder": "#ffff00",
             "menu.background": "#000000",
             "quickInput.background": "#000000",
@@ -17,23 +18,26 @@
             "activityBarBadge.background": "#0000aa",
             "selection.background": "#666666",
             "editor.selectionBackground": "#333333",
-            "editor.lineHighlightBorder": "#000000",
+            "editor.lineHighlightBorder": "#00000000",
             "editor.lineHighlightBackground": "#111111",
-            "editor.findMatchHighlightBackground": "#665500",
+            "editor.findMatchHighlightBackground": "#665500bb",
+            "editor.findMatchHighlightBorder": "#00000000",
             "editor.findMatchBackground": "#333333",
+            "editor.selectionHighlightBackground": "#223300",
+            "editor.selectionHighlightBorder": "#00000000",
             "editor.findMatchBorder": "#aaaaaa",
             "editorSuggestWidget.background": "#000000",
             "editorHoverWidget.background": "#000000",
-            "sideBarSectionHeader.background": "#000000"
+            "sideBarSectionHeader.background": "#000000",
+            "statusBarItem.remoteBackground": "#000",
+            "editorWhitespace.foreground": "#333333dd",
+            "editorIndentGuide.background1": "#33333388",
+            "editorIndentGuide.activeBackground1": "#333333bb"
         }
     },
     "git.confirmSync": false,
     "window.titleBarStyle": "custom",
-    "workbench.startupEditor": "newUntitledFile",
     "diffEditor.renderSideBySide": false,
-    "vetur.format.options.tabSize": 4,
-    "vetur.format.options.useTabs": true,
-    "discord.removeRemoteRepository": true,
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
     "diffEditor.ignoreTrimWhitespace": false,
@@ -49,8 +53,4 @@
     "typescript.preferences.importModuleSpecifier": "non-relative",
     "typescript.preferences.importModuleSpecifierEnding": "index",
     "editor.insertSpaces": false,
-    "vetur.grammar.customBlocks": {
-        "docs": "md",
-        "i18n": "json"
-    },
 }

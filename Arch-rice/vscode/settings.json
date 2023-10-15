@@ -18,6 +18,7 @@
             "activityBarBadge.background": "#0000aa",
             "selection.background": "#666666",
             "editor.selectionBackground": "#333333",
+            "editor.inactiveSelectionBackground": "#333333",
             "editor.lineHighlightBorder": "#00000000",
             "editor.lineHighlightBackground": "#111111",
             "editor.findMatchHighlightBackground": "#665500bb",

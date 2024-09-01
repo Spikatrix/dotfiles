@@ -37,3 +37,9 @@
     - yaycache
     - gitconfig
     - vscode settings and keybinds
+ - AHK scripts
+    - SwitchToRecent.ahk
+    - AltTilde.ahk
+    - CloseWindow.ahk
+    - MediaControls.ahk
+

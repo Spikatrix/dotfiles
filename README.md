@@ -38,8 +38,10 @@
     - gitconfig
     - vscode settings and keybinds
  - AHK scripts
-    - SwitchToRecent.ahk
     - AltTilde.ahk
+    - Brightness.ahk
     - CloseWindow.ahk
+    - CopilotCtrl.ahk
     - MediaControls.ahk
+    - SwitchToRecent.ahk
 

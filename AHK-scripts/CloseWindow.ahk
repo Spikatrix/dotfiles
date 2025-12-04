@@ -16,3 +16,13 @@
     }
 
 }
+
+^!+L:: {
+    ; Call the system function to put the computer to sleep
+    DllCall("PowrProf\SetSuspendState", "int", 0, "int", 0, "int", 0)
+}
+
+^!+r:: {
+    ; Shuts down the computer (0 = Log off, 1 = Restart, 2 = Shutdown)
+    Shutdown 2
+}
